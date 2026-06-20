@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Boulevard Comida Rápida</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tema-boulevard bg-light">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg bg-dark shadow-sm py-3 sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand logo-boulevard fw-bold text-uppercase text-warning" href="nosotros.html">
+                <i class="bi bi-shop"></i> BOULEVARD
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavegacion">
+                <ul class="nav nav-underline ms-auto align-items-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold text-warning" aria-current="page" href="nosotros.html">Nuestra Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-light" href="catalogo.html">Catálogo y Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="btn btn-warning rounded-pill px-4 fw-bold">
+                            <i class="bi bi-person-circle me-2"></i> Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- SECCIÓN: Hero -->
+        <section class="hero-section bg-white text-center py-5">
+            <div class="container py-5">
+                <h1 class="display-4 fw-bold text-uppercase text-dark">El Verdadero Sabor Urbano</h1>
+                <p class="lead fs-4 text-dark">Innovación y tradición en cada bocado.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Nuestra Historia + Imagen -->
+        <section class="container py-5">
+            <div class="row g-5 align-items-center">
+                <!-- Texto de la historia -->
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4 text-warning">Nuestra Historia</h2>
+                    <p class="fs-5 text-muted">En <strong>Boulevard</strong>, nacimos con la idea de revolucionar la comida rápida. Observamos que nuestros clientes buscaban el sabor clásico peruano (como un buen chaufa o un broaster crujiente), pero con una presentación innovadora para comer al paso.</p>
+                    <p class="fs-5 text-muted">Así nacieron nuestros famosos <strong>Conos Chiferos y Salchipaperos</strong>. Combinamos la rapidez de la calle con la calidad de un restaurante, creando una experiencia única que hoy nos distingue.</p>
+                </div>
+                
+                <!-- Imagen referencial al lado -->
+                <div class="col-lg-6">
+                    <img src="imagenes/nosotros/boulevard-local.jpg" 
+                         alt="Local de Boulevard Comida Rápida" 
+                         class="img-fluid rounded shadow"
+                         loading="lazy"
+                         onerror="this.src='imagenes/placeholder.jpg'">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Misión y Visión -->
+        <section class="container py-5">
+            <div class="row g-4">
+                <!-- Misión -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100 card-mision-vision">
+                        <div class="card-body p-4">
+                            <h3 class="fw-bold text-warning"><i class="bi bi-bullseye me-2"></i> Misión</h3>
+                            <p class="mb-0">Brindar a nuestros clientes una experiencia deliciosa, rápida y satisfactoria, ofreciendo combinaciones urbanas de alta calidad con un servicio excepcional y amigable.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visión -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100 card-mision-vision">
+                        <div class="card-body p-4">
+                            <h3 class="fw-bold text-dark"><i class="bi bi-eye me-2 text-warning"></i> Visión</h3>
+                            <p class="mb-0">Ser la marca referente de comida rápida innovadora en la región, reconocidos por nuestra originalidad en formatos (como los conos), calidad de insumos y sabor inigualable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Valores -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-2">Nuestros Valores</h2>
+                <div class="bg-dark mx-auto mb-4" style="height: 4px; width: 80px;"></div>
+                
+                <div class="row g-4 text-center">
+                    <div class="col-md-4">
+                        <div class="p-4">
+                            <i class="bi bi-star-fill display-4 text-warning"></i>
+                            <h4 class="fw-bold mt-3">Calidad</h4>
+                            <p class="text-muted small">Insumos frescos y seleccionados para garantizar el mejor sabor en cada plato.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4">
+                            <i class="bi bi-lightbulb-fill display-4 text-warning"></i>
+                            <h4 class="fw-bold mt-3">Innovación</h4>
+                            <p class="text-muted small">Constantemente creando nuevas formas de disfrutar la comida clásica.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4">
+                            <i class="bi bi-emoji-smile-fill display-4 text-warning"></i>
+                            <h4 class="fw-bold mt-3">Servicio</h4>
+                            <p class="text-muted small">Atención rápida, cálida y pensada siempre en la satisfacción del cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5 border-top mt-auto">
+        <div class="container">
+            <div class="row gy-4">
+                
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold text-uppercase mb-3 text-warning">
+                        <i class="bi bi-shop"></i> BOULEVARD
+                    </h4>
+                    <p class="small mb-3">Conéctate con nosotros</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-light rounded-circle border shadow-sm" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light rounded-circle border shadow-sm" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-4 text-warning">Nuestros Productos</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="catalogo.html#hamburguesas" class="text-decoration-none text-light">Hamburguesas</a></li>
+                        <li class="mb-2"><a href="catalogo.html#salchipapas" class="text-decoration-none text-light">Salchipapas</a></li>
+                        <li class="mb-2"><a href="catalogo.html#conos" class="text-decoration-none text-light">Conos Urbanos</a></li>
+                        <li class="mb-2"><a href="catalogo.html#alitas" class="text-decoration-none text-light">Alitas</a></li>
+                        <li class="mb-2"><a href="catalogo.html#broaster" class="text-decoration-none text-light">Broaster</a></li>
+                        <li class="mb-2"><a href="catalogo.html#chifa" class="text-decoration-none text-light">Chifa</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-4 text-warning">Ayuda</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Comprobante Electrónico</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Política de Datos Personales</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Términos y Condiciones</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Derecho de ARCO</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Nuestros Locales</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Zonas de Reparto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3 text-warning">Libro de reclamaciones</h6>
+                    <a href="#" class="d-inline-block border border-secondary rounded p-2 mb-4 text-decoration-none text-center bg-white text-dark shadow-sm">
+                        <i class="bi bi-book fs-3 d-block text-warning"></i>
+                        <span class="small fw-bold">Libro de<br>Reclamaciones</span>
+                    </a>
+                    
+                    <h6 class="fw-bold mb-3 text-warning">Métodos de Pago</h6>
+                    <div class="d-flex gap-2 fs-3">
+                        <i class="bi bi-credit-card-fill text-light"></i>
+                        <i class="bi bi-cash text-light"></i>
+                        <i class="bi bi-phone-fill text-light"></i>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="my-4" style="border-color: #495057;">
+            
+            <div class="row">
+                <div class="col text-center">
+                    <p class="small text-light mb-0">&copy; 2026 Boulevard. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

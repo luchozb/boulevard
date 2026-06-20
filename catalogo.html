@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Boulevard</title>
+    
+    <link rel="icon" type="image/png" href="imagenes/logo_boulevard.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tema-boulevard bg-light">
+
+    <nav class="navbar navbar-expand-lg bg-dark shadow-sm py-3 sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand logo-boulevard fw-bold text-uppercase text-warning" href="index.html">
+                <i class="bi bi-shop"></i> BOULEVARD
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavegacion">
+                <ul class="nav nav-underline ms-auto align-items-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-light" href="index.html">Nuestra Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold text-warning" aria-current="page" href="catalogo.html">Catálogo y Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-warning rounded-pill px-4 fw-bold" id="verCarritoBtn">
+                            <i class="bi bi-cart-fill me-2"></i> Carrito <span id="carritoCount" class="badge bg-dark text-warning ms-1 rounded-pill">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container my-5">
+        
+        <nav class="mb-5">
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+                <a href="#hamburguesas" class="btn btn-dark rounded-pill px-3"><i class="bi bi-bagel me-1"></i> Hamburguesas</a>
+                <a href="#salchipapas" class="btn btn-dark rounded-pill px-3"><i class="bi bi-fire me-1"></i> Salchipapas</a>
+                <a href="#salchipollo" class="btn btn-dark rounded-pill px-3"><i class="bi bi-fire me-1"></i> Salchipollo</a>
+                <a href="#conos" class="btn btn-dark rounded-pill px-3"><i class="bi bi-cone me-1"></i> Conos</a>
+                <a href="#alitas" class="btn btn-dark rounded-pill px-3"><i class="bi bi-bug me-1"></i> Alitas</a>
+                <a href="#broaster" class="btn btn-dark rounded-pill px-3"><i class="bi bi-egg-fried me-1"></i> Broaster</a>
+                <a href="#chifa" class="btn btn-dark rounded-pill px-3"><i class="bi bi-bowl-fill me-1"></i> Chifa</a>
+                <a href="#extras" class="btn btn-dark rounded-pill px-3"><i class="bi bi-plus-circle me-1"></i> Extras</a>
+            </div>
+        </nav>
+
+        <!-- HAMBURGUESAS -->
+        <section id="hamburguesas" class="mb-5">
+            <h2 class="titulo-seccion text-warning mb-4"><i class="bi bi-bagel me-2"></i> Hamburguesas</h2>
+            
+            <h4 class="text-warning fw-bold mt-4 mb-3"><i class="bi bi-circle-fill me-2 small"></i> Hamburguesas de Carne</h4>
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/clasica-carne.jpg" alt="Hamburguesa Clásica de Carne" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Clásica de Carne</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Carne</span>
+                            <h5 class="card-title fw-bold">Clásica</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 8.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-clasica-carne"
+                                    data-nombre="Hamburguesa Clásica (Carne)"
+                                    data-precio="8.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/cheese-carne.jpg" alt="Hamburguesa Cheese de Carne con Queso" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Cheese de Carne</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Carne</span>
+                            <h5 class="card-title fw-bold">Cheese</h5>
+                            <p class="card-text text-muted small">Con queso.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 9.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-cheese-carne"
+                                    data-nombre="Hamburguesa Cheese (Carne)"
+                                    data-precio="9.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/royal-carne.jpg" alt="Hamburguesa Royal de Carne" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Royal de Carne</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Carne</span>
+                            <h5 class="card-title fw-bold">Royal</h5>
+                            <p class="card-text text-muted small">Queso, huevo, tocino.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 12.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-royal-carne"
+                                    data-nombre="Hamburguesa Royal (Carne)"
+                                    data-precio="12.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/parrillera-carne.jpg" alt="Hamburguesa Parrillera de Carne" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Parrillera de Carne</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Carne</span>
+                            <h5 class="card-title fw-bold">Parrillera</h5>
+                            <p class="card-text text-muted small">Queso, chorizo.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 13.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-parrillera-carne"
+                                    data-nombre="Hamburguesa Parrillera (Carne)"
+                                    data-precio="13.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/doble-carne.jpg" alt="Hamburguesa Doble de Carne" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Doble de Carne</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Carne</span>
+                            <h5 class="card-title fw-bold">Doble</h5>
+                            <p class="card-text text-muted small">Tocino x2, queso x2.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 16.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-doble-carne"
+                                    data-nombre="Hamburguesa Doble (Carne)"
+                                    data-precio="16.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/pobre-carne.jpg" alt="Hamburguesa Pobre de Carne" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Pobre de Carne</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Carne</span>
+                            <h5 class="card-title fw-bold">Pobre</h5>
+                            <p class="card-text text-muted small">Queso, huevo, plátanos.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 14.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-pobre-carne"
+                                    data-nombre="Hamburguesa Pobre (Carne)"
+                                    data-precio="14.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text-warning fw-bold mt-4 mb-3"><i class="bi bi-circle-fill me-2 small"></i> Hamburguesas de Pollo</h4>
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/clasica-pollo.jpg" alt="Hamburguesa Clásica de Pollo" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Clásica de Pollo</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Pollo</span>
+                            <h5 class="card-title fw-bold">Clásica</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 9.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-clasica-pollo"
+                                    data-nombre="Hamburguesa Clásica (Pollo)"
+                                    data-precio="9.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/cheese-pollo.jpg" alt="Hamburguesa Cheese de Pollo" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Cheese de Pollo</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Pollo</span>
+                            <h5 class="card-title fw-bold">Cheese</h5>
+                            <p class="card-text text-muted small">Con queso.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 10.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-cheese-pollo"
+                                    data-nombre="Hamburguesa Cheese (Pollo)"
+                                    data-precio="10.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/royal-pollo.jpg" alt="Hamburguesa Royal de Pollo" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Royal de Pollo</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Pollo</span>
+                            <h5 class="card-title fw-bold">Royal</h5>
+                            <p class="card-text text-muted small">Queso, huevo, tocino.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 13.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-royal-pollo"
+                                    data-nombre="Hamburguesa Royal (Pollo)"
+                                    data-precio="13.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/parrillera-pollo.jpg" alt="Hamburguesa Parrillera de Pollo" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Parrillera de Pollo</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Pollo</span>
+                            <h5 class="card-title fw-bold">Parrillera</h5>
+                            <p class="card-text text-muted small">Queso, chorizo.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 14.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-parrillera-pollo"
+                                    data-nombre="Hamburguesa Parrillera (Pollo)"
+                                    data-precio="14.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/hamburguesas/pobre-pollo.jpg" alt="Hamburguesa Pobre de Pollo" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Hamburguesa Pobre de Pollo</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Pollo</span>
+                            <h5 class="card-title fw-bold">Pobre</h5>
+                            <p class="card-text text-muted small">Queso, huevo, plátanos.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 15.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="hamburguesa-pobre-pollo"
+                                    data-nombre="Hamburguesa Pobre (Pollo)"
+                                    data-precio="15.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SALCHIPAPAS -->
+        <section id="salchipapas" class="mb-5">
+            <h2 class="titulo-seccion text-warning mb-4"><i class="bi bi-fire me-2"></i> Salchipapas</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/salchipapas/clasico.jpg" alt="Salchipapa Clásico" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Salchipapa Clásico</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Clásico</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 9.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="salchipapa-clasico"
+                                    data-nombre="Salchipapa Clásico"
+                                    data-precio="9.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/salchipapas/montada.jpg" alt="Salchipapa Montada con Huevo" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Salchipapa Montada</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Montada</h5>
+                            <p class="card-text text-muted small">Con huevo.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 11.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="salchipapa-montada"
+                                    data-nombre="Salchipapa Montada"
+                                    data-precio="11.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/salchipapas/mixto.jpg" alt="Salchipapa Mixto" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Salchipapa Mixto</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Mixto</h5>
+                            <p class="card-text text-muted small">Salchicha, chorizo, huevo.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 14.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="salchipapa-mixto"
+                                    data-nombre="Salchipapa Mixto"
+                                    data-precio="14.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/salchipapas/pobre.jpg" alt="Salchipapa Pobre" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Salchipapa Pobre</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Pobre</h5>
+                            <p class="card-text text-muted small">Salchicha, huevo, plátanos.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 13.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="salchipapa-pobre"
+                                    data-nombre="Salchipapa Pobre"
+                                    data-precio="13.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/salchipapas/royal.jpg" alt="Salchipapa Royal" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Salchipapa Royal</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Royal</h5>
+                            <p class="card-text text-muted small">Salchicha, huevo, queso.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 13.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="salchipapa-royal"
+                                    data-nombre="Salchipapa Royal"
+                                    data-precio="13.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SALCHIPOLLO -->
+        <section id="salchipollo" class="mb-5">
+            <h2 class="titulo-seccion text-warning mb-4"><i class="bi bi-fire me-2"></i> Salchipollo</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/salchipollo/clasico.jpg" alt="Salchipollo Clásico" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Salchipollo Clásico</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Clásico</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 11.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="salchipollo-clasico"
+                                    data-nombre="Salchipollo Clásico"
+                                    data-precio="11.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/salchipollo/montada.jpg" alt="Salchipollo Montada" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Salchipollo Montada</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Montada</h5>
+                            <p class="card-text text-muted small">Con huevo.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 12.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="salchipollo-montada"
+                                    data-nombre="Salchipollo Montada"
+                                    data-precio="12.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/salchipollo/mixto.jpg" alt="Salchipollo Mixto" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Salchipollo Mixto</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Mixto</h5>
+                            <p class="card-text text-muted small">Salchicha, chorizo, huevo.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 16.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="salchipollo-mixto"
+                                    data-nombre="Salchipollo Mixto"
+                                    data-precio="16.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/salchipollo/pobre.jpg" alt="Salchipollo Pobre" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Salchipollo Pobre</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Pobre</h5>
+                            <p class="card-text text-muted small">Salchicha, huevo, plátanos.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 16.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="salchipollo-pobre"
+                                    data-nombre="Salchipollo Pobre"
+                                    data-precio="16.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONOS -->
+        <section id="conos" class="mb-5">
+            <h2 class="titulo-seccion text-warning mb-4"><i class="bi bi-cone me-2"></i> Conos</h2>
+            
+            <h4 class="text-warning fw-bold mt-4 mb-3"><i class="bi bi-circle-fill me-2 small"></i> Salchipaperos</h4>
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/conos/salchipapa-chifero.jpg" alt="Cono Salchipapa Chifero" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Cono Salchipapa Chifero</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Salchipapero</span>
+                            <h5 class="card-title fw-bold">Salchipapa Chifero</h5>
+                            <p class="card-text text-muted small">Chaufa, papas, salchicha, gaseosa.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 12.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="cono-salchipapa-chifero"
+                                    data-nombre="Cono Salchipapa Chifero"
+                                    data-precio="12.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/conos/clasica.jpg" alt="Cono Clásica" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Cono Clásica</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Salchipapero</span>
+                            <h5 class="card-title fw-bold">Clásica</h5>
+                            <p class="card-text text-muted small">Papas, salchicha, gaseosa.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 12.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="cono-clasica"
+                                    data-nombre="Cono Clásica"
+                                    data-precio="12.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text-warning fw-bold mt-4 mb-3"><i class="bi bi-circle-fill me-2 small"></i> Chiferos</h4>
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/conos/broaster.jpg" alt="Cono Broaster" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Cono Broaster</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Chifero</span>
+                            <h5 class="card-title fw-bold">Cono Broaster</h5>
+                            <p class="card-text text-muted small">Chaufa, papas, broaster, gaseosa.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 16.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="cono-broaster"
+                                    data-nombre="Cono Broaster"
+                                    data-precio="16.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/conos/alitas.jpg" alt="Cono Alitas" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Cono Alitas</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-dark mb-2 text-warning align-self-start">Chifero</span>
+                            <h5 class="card-title fw-bold">Cono Alitas</h5>
+                            <p class="card-text text-muted small">Chaufa, papas, alitas, gaseosa.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 16.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="cono-alitas"
+                                    data-nombre="Cono Alitas"
+                                    data-precio="16.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALITAS -->
+        <section id="alitas" class="mb-5">
+            <h2 class="titulo-seccion text-warning mb-4"><i class="bi bi-bug me-2"></i> Alitas</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/alitas/bbq.jpg" alt="Alitas BBQ" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Alitas BBQ</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Alitas BBQ</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 15.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="alitas-bbq"
+                                    data-nombre="Alitas BBQ"
+                                    data-precio="15.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/alitas/bbq-hot.jpg" alt="Alitas BBQ HOT" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Alitas BBQ HOT</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Alitas BBQ HOT</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 15.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="alitas-bbq-hot"
+                                    data-nombre="Alitas BBQ HOT"
+                                    data-precio="15.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/alitas/bufalo.jpg" alt="Alitas Búfalo" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Alitas Búfalo</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Alitas BUFALO</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 15.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="alitas-bufalo"
+                                    data-nombre="Alitas BUFALO"
+                                    data-precio="15.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/alitas/maracuya.jpg" alt="Alitas Maracuyá" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Alitas Maracuyá</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Alitas MARACUYA</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 15.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="alitas-maracuya"
+                                    data-nombre="Alitas MARACUYA"
+                                    data-precio="15.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/alitas/chimichurri.jpg" alt="Alitas Chimichurri" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Alitas Chimichurri</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Alitas CHIMICHURRI</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 16.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="alitas-chimichurri"
+                                    data-nombre="Alitas CHIMICHURRI"
+                                    data-precio="16.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/alitas/acevichada.jpg" alt="Alitas Acevichada" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Alitas Acevichada</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Alitas ACEVICHADA</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 16.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="alitas-acevichada"
+                                    data-nombre="Alitas ACEVICHADA"
+                                    data-precio="16.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/alitas/broaster.jpg" alt="Alitas Broaster" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Alitas Broaster</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Alitas BROASTER</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 14.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="alitas-broaster"
+                                    data-nombre="Alitas BROASTER"
+                                    data-precio="14.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BROASTER -->
+        <section id="broaster" class="mb-5">
+            <h2 class="titulo-seccion text-warning mb-4"><i class="bi bi-egg-fried me-2"></i> Broaster</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/broaster/clasico-1-8.jpg" alt="Broaster Clásico 1/8" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Broaster Clásico 1/8</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Clásico 1/8</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 10.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="broaster-clasico-1-8"
+                                    data-nombre="Broaster Clásico 1/8"
+                                    data-precio="10.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/broaster/clasico-1-4.jpg" alt="Broaster Clásico 1/4" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Broaster Clásico 1/4</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Clásico 1/4</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 14.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="broaster-clasico-1-4"
+                                    data-nombre="Broaster Clásico 1/4"
+                                    data-precio="14.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/broaster/mostrito-1-8.jpg" alt="Broaster Mostrito 1/8" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Broaster Mostrito 1/8</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Mostrito 1/8</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 14.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="broaster-mostrito-1-8"
+                                    data-nombre="Broaster Mostrito 1/8"
+                                    data-precio="14.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/broaster/mostro-1-4.jpg" alt="Broaster Mostro 1/4" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Broaster Mostro 1/4</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Mostro 1/4</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 18.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="broaster-mostro-1-4"
+                                    data-nombre="Broaster Mostro 1/4"
+                                    data-precio="18.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/broaster/salchi-broaster.jpg" alt="Broaster Salchi" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Broaster Salchi</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Salchi Broaster</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 14.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="broaster-salchi"
+                                    data-nombre="Broaster Salchi"
+                                    data-precio="14.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHIFA -->
+        <section id="chifa" class="mb-5">
+            <h2 class="titulo-seccion text-warning mb-4"><i class="bi bi-bowl-fill me-2"></i> Chifa</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/chifa/chaufa-pollo.jpg" alt="Chaufa de Pollo" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Chaufa de Pollo</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Chaufa de Pollo</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 9.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="chaufa-pollo"
+                                    data-nombre="Chaufa de Pollo"
+                                    data-precio="9.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/chifa/chaufa-res.jpg" alt="Chaufa de Res" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Chaufa de Res</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Chaufa de Res</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 10.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="chaufa-res"
+                                    data-nombre="Chaufa de Res"
+                                    data-precio="10.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/chifa/chaufa-mixto.jpg" alt="Chaufa Mixto" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Chaufa Mixto</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Chaufa Mixto</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 12.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="chaufa-mixto"
+                                    data-nombre="Chaufa Mixto"
+                                    data-precio="12.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/chifa/chaufa-alitas.jpg" alt="Chaufa con Alitas" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Chaufa con Alitas</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Chaufa con Alitas</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 14.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="chaufa-alitas"
+                                    data-nombre="Chaufa con Alitas"
+                                    data-precio="14.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/chifa/chaufa-lomo.jpg" alt="Chaufa con Lomo" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Chaufa con Lomo</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Chaufa con Lomo</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 15.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="chaufa-lomo"
+                                    data-nombre="Chaufa con Lomo"
+                                    data-precio="15.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/chifa/pollo-pobre.jpg" alt="Chaufa Pollo a lo Pobre" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Chaufa Pollo a lo Pobre</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Chaufa Pollo a lo Pobre</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 12.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="chaufa-pollo-pobre"
+                                    data-nombre="Chaufa Pollo a lo Pobre"
+                                    data-precio="12.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/chifa/res-pobre.jpg" alt="Chaufa Res a lo Pobre" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Chaufa Res a lo Pobre</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Chaufa Res a lo Pobre</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 13.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="chaufa-res-pobre"
+                                    data-nombre="Chaufa Res a lo Pobre"
+                                    data-precio="13.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/chifa/triple.jpg" alt="Chaufa Triple" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Chaufa Triple</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Chaufa Triple</h5>
+                            <p class="card-text text-muted small">Pollo, carne, chorizo.</p>
+                            <h5 class="mt-auto text-warning fw-bold">$ 13.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="chaufa-triple"
+                                    data-nombre="Chaufa Triple"
+                                    data-precio="13.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXTRAS -->
+        <section id="extras" class="mb-5">
+            <h2 class="titulo-seccion text-warning mb-4"><i class="bi bi-plus-circle me-2"></i> Extras y Guarniciones</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/extras/lomo-saltado.jpg" alt="Lomo Saltado" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Lomo Saltado</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Lomo Saltado</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 12.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="lomo-saltado"
+                                    data-nombre="Lomo Saltado"
+                                    data-precio="12.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/extras/lomo-pobre.jpg" alt="Lomo a lo Pobre" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Lomo a lo Pobre</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Lomo a lo Pobre</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 14.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="lomo-pobre"
+                                    data-nombre="Lomo a lo Pobre"
+                                    data-precio="14.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/extras/pollo-plancha.jpg" alt="Pollo a la Plancha" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Pollo a la Plancha</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Pollo a la Plancha</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 10.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="pollo-plancha"
+                                    data-nombre="Pollo a la Plancha"
+                                    data-precio="10.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/extras/papas.jpg" alt="Papas" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Papas</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Papas</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 5.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="papas"
+                                    data-nombre="Papas"
+                                    data-precio="5.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/extras/platanos.jpg" alt="Plátanos" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Plátanos</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Plátanos</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 3.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="platanos"
+                                    data-nombre="Plátanos"
+                                    data-precio="3.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/extras/arroz.jpg" alt="Arroz Blanco" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Arroz Blanco</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Arroz Blanco</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 4.00</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="arroz"
+                                    data-nombre="Arroz Blanco"
+                                    data-precio="4.00">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/extras/ensalada.jpg" alt="Ensalada" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Ensalada</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Ensalada</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 2.50</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="ensalada"
+                                    data-nombre="Ensalada"
+                                    data-precio="2.50">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="imagenes/extras/huevo.jpg" alt="Huevo" width="400" height="300" loading="lazy">
+                            <div class="img-fallback">Huevo</div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Huevo</h5>
+                            <h5 class="mt-auto text-warning fw-bold">$ 1.50</h5>
+                            <div class="input-group input-group-sm mb-3 mt-2">
+                                <button class="btn btn-outline-secondary btn-resta" type="button">-</button>
+                                <input type="number" class="form-control text-center cantidad" value="1" min="1" readonly>
+                                <button class="btn btn-outline-secondary btn-suma" type="button">+</button>
+                            </div>
+                            <button class="btn btn-warning w-100 agregar-carrito"
+                                    data-id="huevo"
+                                    data-nombre="Huevo"
+                                    data-precio="1.50">
+                                <i class="bi bi-cart-plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white text-dark py-5 border-top mt-auto">
+        <div class="container">
+            <div class="row gy-4">
+                
+                <!-- Columna 1: Marca y Redes -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold text-uppercase mb-3" style="color: #e69c24;">
+                        <i class="bi bi-shop"></i> BOULEVARD
+                    </h4>
+                    <p class="fw-bold small mb-3">Conéctate con nosotros</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-light rounded-circle border shadow-sm" aria-label="Instagram">
+                            <i class="bi bi-instagram text-dark"></i>
+                        </a>
+                        <a href="#" class="btn btn-light rounded-circle border shadow-sm" aria-label="Facebook">
+                            <i class="bi bi-facebook text-dark"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Nuestros Productos -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-4">Nuestros Productos</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Favoritos</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Promociones</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Conos Urbanos</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Alitas</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Broaster</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Chifa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Ayuda -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-4">Ayuda</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Comprobante Electrónico</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Política de Datos Personales</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Términos y Condiciones</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Derecho de ARCO</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Nuestros Locales</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Zonas de Reparto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Libro de Reclamaciones y Pagos -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Libro de reclamaciones</h6>
+                    <a href="#" class="text-decoration-none text-muted small d-flex align-items-center mb-4">
+                        <i class="bi bi-journal-text fs-2 me-2" style="color: #1a73e8;"></i>
+                        <span>Libro de<br>Reclamaciones</span>
+                    </a>
+                    
+                    <h6 class="fw-bold mb-3">Métodos de Pago</h6>
+                    <div class="d-flex gap-2 fs-3">
+                        <i class="bi bi-credit-card-2-front-fill" style="color: #1434CB;" title="Visa"></i>
+                        <i class="bi bi-credit-card-fill" style="color: #EB001B;" title="Mastercard"></i>
+                        <i class="bi bi-wallet-fill text-secondary" title="Billeteras Digitales"></i>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Divisor y Copyright -->
+            <hr class="my-4" style="border-color: #dee2e6;">
+            
+            <div class="row">
+                <div class="col text-start">
+                    <p class="small text-muted mb-0">&copy; 2026 Boulevard. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
