@@ -11,10 +11,9 @@
 </head>
 <body class="tema-boulevard bg-light">
 
-    <!-- BARRA DE NAVEGACIÓN -->
     <nav class="navbar navbar-expand-lg bg-dark shadow-sm py-3 sticky-top" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand logo-boulevard fw-bold text-uppercase text-warning" href="nosotros.html">
+            <a class="navbar-brand logo-boulevard fw-bold text-uppercase text-warning" href="index.html">
                 <i class="bi bi-shop"></i> BOULEVARD
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
@@ -23,7 +22,7 @@
             <div class="collapse navbar-collapse" id="menuNavegacion">
                 <ul class="nav nav-underline ms-auto align-items-center gap-3">
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-light" href="nosotros.html">Nuestra Historia</a>
+                        <a class="nav-link fw-bold text-light" href="index.html">Nuestra Historia</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bold text-light" href="catalogo.html">Catálogo y Pedidos</a>
@@ -42,7 +41,6 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 
-                <!-- Indicador de Pasos -->
                 <div class="d-flex justify-content-center align-items-center gap-3 mb-5">
                     <div class="text-center">
                         <div class="bg-warning text-dark rounded-circle d-inline-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px;">1</div>
@@ -61,12 +59,10 @@
                 </div>
 
                 <div class="row g-4">
-                    <!-- Formulario de Datos -->
                     <div class="col-lg-7">
                         <div class="card border-0 shadow-sm">
                             <div class="card-body p-4">
                                 
-                                <!-- Datos del Cliente -->
                                 <h3 class="fw-bold text-warning mb-4">
                                     <i class="bi bi-person-fill me-2"></i>Datos del Cliente
                                 </h3>
@@ -106,7 +102,6 @@
                                         </div>
                                     </div>
 
-                                    <!-- Dirección de Entrega -->
                                     <h3 class="fw-bold text-warning mb-4 mt-5">
                                         <i class="bi bi-geo-alt-fill me-2"></i>Dirección de Entrega
                                     </h3>
@@ -149,7 +144,6 @@
                                         </div>
                                     </div>
 
-                                    <!-- Tipo de Entrega -->
                                     <h3 class="fw-bold text-warning mb-4 mt-5">
                                         <i class="bi bi-truck me-2"></i>Tipo de Entrega
                                     </h3>
@@ -183,7 +177,6 @@
                                         </div>
                                     </div>
 
-                                    <!-- Botones -->
                                     <div class="d-flex justify-content-between mt-5">
                                         <a href="catalogo.html" class="btn btn-outline-warning rounded-pill px-4 fw-bold">
                                             <i class="bi bi-arrow-left me-2"></i>Volver al Catálogo
@@ -197,52 +190,49 @@
                         </div>
                     </div>
 
-                    <!-- Resumen del Pedido -->
+                    <!-- Resumen del Pedido - DINÁMICO -->
                     <div class="col-lg-5">
-                        <div class="card border-0 shadow-sm bg-dark text-white">
+                        <div class="card border-0 shadow-sm bg-white">
                             <div class="card-body p-4">
                                 <h5 class="fw-bold text-warning mb-4">
                                     <i class="bi bi-cart-fill me-2"></i>Resumen del Pedido
                                 </h5>
                                 
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>Hamburguesa Royal x1</span>
-                                    <span>$12.00</span>
-                                </div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>Salchipapa Mixto x2</span>
-                                    <span>$28.00</span>
-                                </div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>Alitas BBQ x1</span>
-                                    <span>$15.00</span>
-                                </div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>Cono Chifero x1</span>
-                                    <span>$16.00</span>
+                                <!-- CONTENEDOR DINÁMICO DE PRODUCTOS -->
+                                <div id="listaProductosCheckout">
+                                    <!-- Se llena automáticamente con los productos del carrito -->
                                 </div>
                                 
-                                <hr style="border-color: #495057;">
-                                
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>Subtotal</span>
-                                    <span>$71.00</span>
-                                </div>
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span>Delivery</span>
-                                    <span>$5.00</span>
+                                <!-- Agregar más productos -->
+                                <div class="text-center mb-3">
+                                    <a href="catalogo.html" class="btn btn-outline-warning btn-sm rounded-pill">
+                                        <i class="bi bi-plus-circle me-1"></i> Agregar más productos
+                                    </a>
                                 </div>
                                 
-                                <hr style="border-color: #e69c24;">
-                                
-                                <div class="d-flex justify-content-between fw-bold fs-5 text-warning">
-                                    <span>TOTAL</span>
-                                    <span>$76.00</span>
+                                <div class="bg-light rounded p-3">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-dark">Subtotal</span>
+                                        <span class="text-dark fw-bold" id="subtotalCheckout">$0.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-dark">Delivery</span>
+                                        <span class="text-dark fw-bold" id="deliveryCheckout">$5.00</span>
+                                    </div>
+                                    
+                                    <hr>
+                                    
+                                    <div class="d-flex justify-content-between fw-bold fs-5">
+                                        <span class="text-dark">TOTAL</span>
+                                        <span class="text-warning" id="totalCheckout">$0.00</span>
+                                    </div>
                                 </div>
                                 
-                                <a href="catalogo.html" class="btn btn-outline-warning btn-sm w-100 mt-4">
-                                    <i class="bi bi-pencil me-2"></i>Modificar Pedido
-                                </a>
+                                <!-- Cupón de descuento -->
+                                <div class="input-group input-group-sm mt-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Código de descuento">
+                                    <button class="btn btn-outline-warning btn-sm fw-bold" type="button">Aplicar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -252,5 +242,30 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    
+    <!-- Script para manejar el cambio de delivery -->
+    <script>
+        const radioDelivery = document.getElementById('delivery');
+        const radioRecojo = document.getElementById('recojo');
+        const deliveryCheckout = document.getElementById('deliveryCheckout');
+        const totalCheckout = document.getElementById('totalCheckout');
+        
+        function actualizarTotal() {
+            const subtotalTexto = document.getElementById('subtotalCheckout').textContent;
+            const subtotal = parseFloat(subtotalTexto.replace('$', '')) || 0;
+            const delivery = radioDelivery.checked ? 5.00 : 0.00;
+            const total = subtotal + delivery;
+            
+            deliveryCheckout.textContent = radioDelivery.checked ? '$5.00' : '$0.00 (Recojo)';
+            totalCheckout.textContent = '$' + total.toFixed(2);
+        }
+        
+        radioDelivery.addEventListener('change', actualizarTotal);
+        radioRecojo.addEventListener('change', actualizarTotal);
+        
+        // También actualizar cuando se carguen los productos
+        setTimeout(actualizarTotal, 500);
+    </script>
 </body>
 </html>
