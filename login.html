@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión / Crear Cuenta - Boulevard</title>
+    
+    <link rel="icon" type="image/png" href="imagenes/logo_boulevard.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tema-boulevard bg-light">
+
+    <nav class="navbar navbar-expand-lg bg-dark shadow-sm py-3 sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand logo-boulevard fw-bold text-uppercase text-warning" href="index.html">
+                <i class="bi bi-shop"></i> BOULEVARD
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavegacion">
+                <ul class="nav nav-underline ms-auto align-items-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-light" href="index.html">Nuestra Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-light" href="catalogo.html">Catálogo y Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="checkout-paso1.html" class="btn btn-warning rounded-pill px-4 fw-bold">
+                            <i class="bi bi-cart-fill me-2"></i> Ir a Pagar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                
+                <div class="row g-0 shadow rounded-4 overflow-hidden">
+                    
+                    <!-- COLUMNA IZQUIERDA: FORMULARIOS INTERCAMBIABLES -->
+                    <div class="col-md-6 bg-white p-5">
+                        
+                        <!-- INICIAR SESIÓN (visible por defecto) -->
+                        <div id="formularioLogin">
+                            <div class="text-center mb-4">
+                                <i class="bi bi-person-circle display-1 text-warning"></i>
+                                <h2 class="fw-bold mt-3">Iniciar Sesión</h2>
+                                <p class="text-muted">Ingresa a tu cuenta Boulevard</p>
+                            </div>
+                            
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Correo Electrónico</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                        <input type="email" class="form-control" placeholder="correo@ejemplo.com">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Contraseña</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                        <input type="password" class="form-control" placeholder="Tu contraseña">
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="recordar">
+                                        <label class="form-check-label small" for="recordar">Recordarme</label>
+                                    </div>
+                                    <a href="#" class="small text-warning">¿Olvidaste tu contraseña?</a>
+                                </div>
+                                
+                                <a href="checkout-paso1.html" class="btn btn-warning w-100 fw-bold py-2 mb-3">
+                                    <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar Sesión
+                                </a>
+                                
+                                <div class="text-center border-top pt-3">
+                                    <p class="small text-muted mb-2">¿No tienes cuenta?</p>
+                                    <a href="#" class="btn btn-outline-warning w-100 fw-bold py-2" onclick="document.getElementById('formularioLogin').style.display='none'; document.getElementById('formularioRegistro').style.display='block'; return false;">
+                                        <i class="bi bi-person-plus-fill me-2"></i>Crear una cuenta
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- CREAR CUENTA (oculto por defecto) -->
+                        <div id="formularioRegistro" style="display: none;">
+                            <div class="text-center mb-4">
+                                <i class="bi bi-person-plus-fill display-1 text-warning"></i>
+                                <h2 class="fw-bold mt-3">Crear Cuenta</h2>
+                                <p class="text-muted">Únete a la familia Boulevard</p>
+                            </div>
+                            
+                            <form>
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Nombres</label>
+                                        <input type="text" class="form-control" placeholder="Juan Carlos">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Apellidos</label>
+                                        <input type="text" class="form-control" placeholder="Pérez López">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3 mt-2">
+                                    <label class="form-label fw-bold">Correo Electrónico</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                        <input type="email" class="form-control" placeholder="correo@ejemplo.com">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Teléfono</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">+51</span>
+                                        <input type="tel" class="form-control" placeholder="999 888 777">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Contraseña</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                        <input type="password" class="form-control" placeholder="Mínimo 6 caracteres">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Confirmar Contraseña</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                        <input type="password" class="form-control" placeholder="Repite tu contraseña">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="terminos">
+                                    <label class="form-check-label small" for="terminos">
+                                        Acepto los <a href="#" class="text-warning">Términos y Condiciones</a>
+                                    </label>
+                                </div>
+                                
+                                <a href="checkout-paso1.html" class="btn btn-warning w-100 fw-bold py-2 mb-3">
+                                    <i class="bi bi-person-check-fill me-2"></i>Crear Cuenta
+                                </a>
+                                
+                                <div class="text-center border-top pt-3">
+                                    <p class="small text-muted mb-2">¿Ya tienes cuenta?</p>
+                                    <a href="#" class="btn btn-outline-warning w-100 fw-bold py-2" onclick="document.getElementById('formularioRegistro').style.display='none'; document.getElementById('formularioLogin').style.display='block'; return false;">
+                                        <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar Sesión
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- COLUMNA DERECHA: INFORMACIÓN -->
+                    <div class="col-md-6 bg-dark text-white p-5 d-flex align-items-center">
+                        <div class="text-center w-100">
+                            <i class="bi bi-shop display-1 text-warning mb-3"></i>
+                            <h3 class="fw-bold text-warning">Bienvenido a Boulevard</h3>
+                            <p class="mb-4">Inicia sesión o crea tu cuenta para disfrutar de beneficios exclusivos, guardar tus pedidos favoritos y realizar compras más rápidas.</p>
+                            
+                            <div class="d-flex justify-content-center gap-4 mb-4">
+                                <div class="text-center">
+                                    <i class="bi bi-bag-check-fill fs-2 text-warning"></i>
+                                    <p class="small mt-1">Pedidos Rápidos</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="bi bi-star-fill fs-2 text-warning"></i>
+                                    <p class="small mt-1">Ofertas Exclusivas</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="bi bi-clock-history fs-2 text-warning"></i>
+                                    <p class="small mt-1">Historial de Compras</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-5 border-top mt-auto">
+        <div class="container">
+            <div class="row gy-4">
+                
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold text-uppercase mb-3 text-warning">
+                        <i class="bi bi-shop"></i> BOULEVARD
+                    </h4>
+                    <p class="small mb-3">Conéctate con nosotros</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-light rounded-circle border shadow-sm" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light rounded-circle border shadow-sm" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-4 text-warning">Nuestros Productos</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="catalogo.html#hamburguesas" class="text-decoration-none text-light">Hamburguesas</a></li>
+                        <li class="mb-2"><a href="catalogo.html#salchipapas" class="text-decoration-none text-light">Salchipapas</a></li>
+                        <li class="mb-2"><a href="catalogo.html#conos" class="text-decoration-none text-light">Conos Urbanos</a></li>
+                        <li class="mb-2"><a href="catalogo.html#alitas" class="text-decoration-none text-light">Alitas</a></li>
+                        <li class="mb-2"><a href="catalogo.html#broaster" class="text-decoration-none text-light">Broaster</a></li>
+                        <li class="mb-2"><a href="catalogo.html#chifa" class="text-decoration-none text-light">Chifa</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-4 text-warning">Ayuda</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Comprobante Electrónico</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Política de Datos Personales</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Términos y Condiciones</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Derecho de ARCO</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Nuestros Locales</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Zonas de Reparto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3 text-warning">Libro de reclamaciones</h6>
+                    <a href="#" class="d-inline-block border border-secondary rounded p-2 mb-4 text-decoration-none text-center bg-white text-dark shadow-sm">
+                        <i class="bi bi-book fs-3 d-block text-warning"></i>
+                        <span class="small fw-bold">Libro de<br>Reclamaciones</span>
+                    </a>
+                    
+                    <h6 class="fw-bold mb-3 text-warning">Métodos de Pago</h6>
+                    <div class="d-flex gap-2 fs-3">
+                        <i class="bi bi-credit-card-fill text-light"></i>
+                        <i class="bi bi-cash text-light"></i>
+                        <i class="bi bi-phone-fill text-light"></i>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="my-4" style="border-color: #495057;">
+            
+            <div class="row">
+                <div class="col text-center">
+                    <p class="small text-light mb-0">&copy; 2026 Boulevard. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

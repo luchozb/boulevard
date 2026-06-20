@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso 3: Confirmación - Boulevard</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tema-boulevard bg-light">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg bg-dark shadow-sm py-3 sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand logo-boulevard fw-bold text-uppercase text-warning" href="nosotros.html">
+                <i class="bi bi-shop"></i> BOULEVARD
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavegacion">
+                <ul class="nav nav-underline ms-auto align-items-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-light" href="nosotros.html">Nuestra Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-light" href="catalogo.html">Catálogo y Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="btn btn-warning rounded-pill px-4 fw-bold">
+                            <i class="bi bi-person-circle me-2"></i> Mi Cuenta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                
+                <!-- Indicador de Pasos -->
+                <div class="d-flex justify-content-center align-items-center gap-3 mb-5">
+                    <div class="text-center">
+                        <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px;">
+                            <i class="bi bi-check-lg"></i>
+                        </div>
+                        <p class="small text-success mt-2 mb-0">Datos de Entrega</p>
+                    </div>
+                    <i class="bi bi-chevron-right text-success fs-5"></i>
+                    <div class="text-center">
+                        <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px;">
+                            <i class="bi bi-check-lg"></i>
+                        </div>
+                        <p class="small text-success mt-2 mb-0">Método de Pago</p>
+                    </div>
+                    <i class="bi bi-chevron-right text-warning fs-5"></i>
+                    <div class="text-center">
+                        <div class="bg-warning text-dark rounded-circle d-inline-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px;">3</div>
+                        <p class="small fw-bold text-warning mt-2 mb-0">Confirmación</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Confirmación del Pedido -->
+                    <div class="col-lg-7">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="fw-bold text-warning mb-4">
+                                    <i class="bi bi-check-circle-fill me-2"></i>Confirmar Pedido
+                                </h3>
+
+                                <!-- Datos del Cliente -->
+                                <div class="card bg-light mb-4">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold text-warning mb-3">
+                                            <i class="bi bi-person-fill me-2"></i>Datos del Cliente
+                                        </h5>
+                                        <div class="row g-2">
+                                            <div class="col-md-6">
+                                                <p class="small mb-1"><strong>Nombre:</strong> Juan Carlos Pérez López</p>
+                                                <p class="small mb-1"><strong>Teléfono:</strong> +51 999 888 777</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="small mb-1"><strong>Email:</strong> juan@correo.com</p>
+                                                <p class="small mb-1"><strong>DNI:</strong> 12345678</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Dirección de Entrega -->
+                                <div class="card bg-light mb-4">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold text-warning mb-3">
+                                            <i class="bi bi-geo-alt-fill me-2"></i>Dirección de Entrega
+                                        </h5>
+                                        <p class="small mb-1"><strong>Dirección:</strong> Av. Principal 123, Dpto 401</p>
+                                        <p class="small mb-1"><strong>Referencia:</strong> Frente al parque, casa azul</p>
+                                        <p class="small mb-1"><strong>Distrito:</strong> Huancayo - Huancayo - Junín</p>
+                                        <p class="small mb-0"><strong>Tipo de Entrega:</strong> Delivery (30-45 min)</p>
+                                    </div>
+                                </div>
+
+                                <!-- Método de Pago -->
+                                <div class="card bg-light mb-4">
+                                    <div class="card-body">
+                                        <h5 class="fw-bold text-warning mb-3">
+                                            <i class="bi bi-credit-card-fill me-2"></i>Método de Pago
+                                        </h5>
+                                        <p class="small mb-1"><strong>Método:</strong> Efectivo Contra Entrega</p>
+                                        <p class="small mb-1"><strong>Cambio para:</strong> Billete de $100</p>
+                                        <p class="small mb-0"><strong>Comprobante:</strong> Boleta</p>
+                                    </div>
+                                </div>
+
+                                <!-- Notas Adicionales -->
+                                <h5 class="fw-bold text-warning mb-3">
+                                    <i class="bi bi-pencil-fill me-2"></i>Notas Adicionales
+                                </h5>
+                                <textarea class="form-control mb-4" rows="3" placeholder="Instrucciones especiales: Sin cebolla, salsa extra, etc."></textarea>
+
+                                <!-- Términos y Condiciones -->
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="terminos" required>
+                                    <label class="form-check-label small" for="terminos">
+                                        Acepto los <a href="#" class="text-warning">Términos y Condiciones</a> y la <a href="#" class="text-warning">Política de Privacidad</a>
+                                    </label>
+                                </div>
+
+                                <!-- Botones -->
+                                <div class="d-flex justify-content-between">
+                                    <a href="checkout-paso2.html" class="btn btn-outline-warning rounded-pill px-4 fw-bold">
+                                        <i class="bi bi-arrow-left me-2"></i>Volver
+                                    </a>
+                                    <button class="btn btn-warning rounded-pill px-5 fw-bold" data-bs-toggle="modal" data-bs-target="#modalConfirmacion">
+                                        <i class="bi bi-check-lg me-2"></i>Confirmar Pedido
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resumen del Pedido -->
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm bg-dark text-white">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold text-warning mb-4">
+                                    <i class="bi bi-cart-fill me-2"></i>Resumen del Pedido
+                                </h5>
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Hamburguesa Royal x1</span>
+                                    <span>$12.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Salchipapa Mixto x2</span>
+                                    <span>$28.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Alitas BBQ x1</span>
+                                    <span>$15.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Cono Chifero x1</span>
+                                    <span>$16.00</span>
+                                </div>
+                                
+                                <hr style="border-color: #495057;">
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Subtotal</span>
+                                    <span>$71.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Delivery</span>
+                                    <span>$5.00</span>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-2 text-success" id="descuentoLinea" style="display: none;">
+                                    <span>Descuento</span>
+                                    <span id="descuentoMonto">-$0.00</span>
+                                </div>
+                                
+                                <hr style="border-color: #e69c24;">
+                                
+                                <div class="d-flex justify-content-between fw-bold fs-5 text-warning">
+                                    <span>TOTAL</span>
+                                    <span>$76.00</span>
+                                </div>
+
+                                <!-- Tiempo Estimado -->
+                                <div class="mt-4 p-3 bg-dark border border-warning rounded text-center">
+                                    <i class="bi bi-clock-fill text-warning fs-4 mb-2 d-block"></i>
+                                    <p class="small mb-1 fw-bold text-warning">Tiempo Estimado de Entrega</p>
+                                    <p class="small mb-0">30 - 45 minutos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Confirmación Exitosa -->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-body text-center p-5">
+                    <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 100px; height: 100px;">
+                        <i class="bi bi-check-lg display-4"></i>
+                    </div>
+                    
+                    <h2 class="fw-bold text-success mb-3">¡Pedido Confirmado!</h2>
+                    <p class="text-muted mb-1">Tu pedido ha sido registrado exitosamente.</p>
+                    <p class="fw-bold text-warning fs-4 mb-4">Pedido #BV-2026-0042</p>
+                    
+                    <div class="bg-light rounded p-3 mb-4">
+                        <p class="small mb-2"><strong>Tiempo estimado:</strong> 30-45 minutos</p>
+                        <p class="small mb-2"><strong>Método de pago:</strong> Efectivo Contra Entrega</p>
+                        <p class="small mb-2"><strong>Total a pagar:</strong> $76.00</p>
+                        <p class="small mb-0"><strong>Cambio para:</strong> Billete de $100</p>
+                    </div>
+                    
+                    <p class="small text-muted mb-4">
+                        <i class="bi bi-envelope-fill me-1"></i> Te enviaremos la confirmación a tu correo<br>
+                        <i class="bi bi-whatsapp me-1"></i> También recibirás un mensaje por WhatsApp
+                    </p>
+                    
+                    <div class="d-flex gap-2 justify-content-center">
+                        <a href="#" class="btn btn-success rounded-pill px-4">
+                            <i class="bi bi-whatsapp me-2"></i>Compartir por WhatsApp
+                        </a>
+                        <a href="catalogo.html" class="btn btn-warning rounded-pill px-4">
+                            <i class="bi bi-shop me-2"></i>Seguir Comprando
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
