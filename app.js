@@ -20,10 +20,7 @@ function actualizarContadorCarrito() {
 // VERIFICAR SI EL CARRITO ESTÁ VACÍO
 // =========================================
 function verificarCarritoVacio() {
-    if (carrito.length === 0) {
-        return true;
-    }
-    return false;
+    return carrito.length === 0;
 }
 
 // =========================================
@@ -43,7 +40,7 @@ document.addEventListener('click', function(e) {
     if (e.target.classList.contains('btn-resta')) {
         const input = e.target.parentElement.querySelector('.cantidad');
         let valor = parseInt(input.value);
-        if (valor > 1) {
+        if (valor > 0) {
             valor--;
             input.value = valor;
         }
@@ -56,6 +53,12 @@ document.addEventListener('click', function(e) {
         const nombre = btn.dataset.nombre;
         const precio = parseFloat(btn.dataset.precio);
         const cantidad = parseInt(btn.closest('.card-body').querySelector('.cantidad').value);
+        
+        // Validar que la cantidad sea mayor a 0
+        if (cantidad <= 0) {
+            alert('Selecciona al menos 1 producto');
+            return;
+        }
         
         // Verificar si el producto ya está en el carrito
         const itemExistente = carrito.find(item => item.id === id);
@@ -90,7 +93,7 @@ document.getElementById('verCarritoBtn')?.addEventListener('click', function(e) 
 });
 
 // =========================================
-// CARGAR PRODUCTOS EN CHECKOUT (checkout-paso1.html)
+// CARGAR PRODUCTOS EN CHECKOUT
 // =========================================
 function cargarProductosCheckout() {
     const contenedorProductos = document.getElementById('listaProductosCheckout');
@@ -136,14 +139,17 @@ function cargarProductosCheckout() {
         `;
     });
     
-    const delivery = 5.00;
+    // Leer el tipo de entrega seleccionado
+    const delivery = document.getElementById('delivery')?.checked ? 5.00 : 0.00;
     const total = subtotal + delivery;
     
     const subtotalElemento = document.getElementById('subtotalCheckout');
     const totalElemento = document.getElementById('totalCheckout');
+    const deliveryElemento = document.getElementById('deliveryCheckout');
     
     if (subtotalElemento) subtotalElemento.textContent = `$${subtotal.toFixed(2)}`;
     if (totalElemento) totalElemento.textContent = `$${total.toFixed(2)}`;
+    if (deliveryElemento) deliveryElemento.textContent = delivery > 0 ? '$5.00' : '$0.00 (Recojo)';
 }
 
 // =========================================
@@ -173,8 +179,6 @@ function eliminarProductoCheckout(index) {
 // =========================================
 // INICIAR SESIÓN / REGISTRO
 // =========================================
-
-// Cambiar entre Login y Registro
 function mostrarRegistro() {
     const formularioLogin = document.getElementById('formularioLogin');
     const formularioRegistro = document.getElementById('formularioRegistro');
@@ -193,7 +197,6 @@ function mostrarLogin() {
     }
 }
 
-// Guardar sesión de usuario
 function guardarSesion(nombre, email) {
     const usuario = {
         nombre: nombre,
@@ -204,7 +207,6 @@ function guardarSesion(nombre, email) {
     window.location.href = 'checkout-paso1.html';
 }
 
-// Cerrar sesión
 function cerrarSesion() {
     localStorage.removeItem('usuario');
     alert('Has cerrado sesión correctamente.');
@@ -216,13 +218,9 @@ function cerrarSesion() {
 // =========================================
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Actualizar contador del carrito
     actualizarContadorCarrito();
-    
-    // Cargar productos en checkout si estamos en esa página
     cargarProductosCheckout();
     
-    // Verificar si hay sesión iniciada
     const usuario = JSON.parse(localStorage.getItem('usuario'));
     const btnSesion = document.querySelector('a[href="login.html"]');
     
